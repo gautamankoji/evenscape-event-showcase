@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #171717;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scrollbar-color: #666 transparent;
+}
+
+*:hover {
+  scrollbar-color: #999 transparent;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+.animate-gradient:hover {
+  animation: gradient 2s ease infinite;
+}
